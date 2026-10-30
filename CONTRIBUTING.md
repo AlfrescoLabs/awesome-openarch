@@ -6,6 +6,8 @@ Thanks for sharing your work. Anyone can suggest a project, including their own.
 
 1. Fork this repository and edit `README.md`.
 2. Add one row to the section that fits best. Keep the table columns.
+   Copy the Status badge from the "Status" table.
+   Add a node and a `click` line for the project to the ecosystem diagram, and update the Projects badge count.
 3. Open a pull request. One project per pull request.
 
 Do not want to edit Markdown? Open a "Suggest a project" issue instead.

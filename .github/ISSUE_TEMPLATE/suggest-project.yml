@@ -1,0 +1,55 @@
+name: Suggest a project
+description: Propose a project, integration or talk for the list.
+title: "Suggest: "
+labels: ["suggestion"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Link
+      description: Repository, product page or recording.
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: Author or partner
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What it does
+      description: One or two short sentences.
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Section
+      options:
+        - Apps and UIs
+        - Connectors and integrations
+        - Storage and server plugins
+        - AI and agents
+        - Partner solutions
+        - Talks and recordings
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options:
+        - Prototype
+        - Working
+        - Commercial
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I am the author, or the author agrees to be listed.
+          required: true

@@ -6,7 +6,7 @@
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg?style=flat" alt="License: CC0 1.0" /></a>
   <a href="https://github.com/AlfrescoLabs/awesome-openarch/actions/workflows/links.yml"><img src="https://github.com/AlfrescoLabs/awesome-openarch/actions/workflows/links.yml/badge.svg" alt="Link check" /></a>
-  <img src="https://img.shields.io/badge/Projects-10-38bdf8.svg?style=flat" alt="Projects listed: 10" />
+  <img src="https://img.shields.io/badge/Projects-17-38bdf8.svg?style=flat" alt="Projects listed: 17" />
   <a href="https://github.com/AlfrescoLabs/awesome-openarch"><img src="https://img.shields.io/github/stars/AlfrescoLabs/awesome-openarch?style=flat&logo=github" alt="GitHub stars" /></a>
   <a href="https://github.com/AlfrescoLabs/awesome-openarch/commits/main"><img src="https://img.shields.io/github/last-commit/AlfrescoLabs/awesome-openarch?style=flat" alt="Last commit" /></a>
   <a href="https://github.com/AlfrescoLabs/awesome-openarch/discussions"><img src="https://img.shields.io/github/discussions/AlfrescoLabs/awesome-openarch?style=flat&logo=github" alt="Discussions" /></a>
@@ -62,6 +62,8 @@ graph LR
         CLA[Content Lake App]
         OC[OpenCrawling]
         SDC[Sample directory connector]
+        DS14[14 data sources]
+        FGA[Flexible GraphRAG App]
     end
 
     OA((OpenArch))
@@ -73,6 +75,10 @@ graph LR
         ACLUI[Alfresco Content Lake UI]
         MCP[Content Lake MCP server]
         NCB[Nuxeo Copilot Bridge]
+        KGA[KG Spaces for Alfresco UI]
+        KGN[KG Spaces for Nuxeo UI]
+        FGUI[Flexible GraphRAG UIs]
+        FGMCP[Flexible GraphRAG MCP server]
     end
 
     ACS --> CLA
@@ -80,16 +86,23 @@ graph LR
     CLA --> OA
     OC --> OA
     SDC --> CLA
-    OA --- GS
+    DS14 --> FGA
+    FGA --> OA
+    OA -. optional .- GS
     OA --> STU
     OA --> CLUI
     OA --> ACLUI
     OA --> MCP
     OA --> NCB
+    FGA --> KGA
+    FGA --> KGN
+    FGA --> FGUI
+    FGA --> FGMCP
 
     click CLA "https://github.com/AlfrescoLabs/content-lake-app"
     click OC "https://github.com/opencrawling/opencrawling"
     click SDC "https://github.com/AlfrescoLabs/content-lake-app/tree/main/plugins/examples/sample-directory-connector"
+    click FGA "https://github.com/stevereiner/flexible-graphrag"
     click OA "https://github.com/Hyland/OpenArch"
     click GS "https://github.com/stevereiner/openarch-graph-storage"
     click STU "https://github.com/haaldinger/openarch-studio"
@@ -97,13 +110,17 @@ graph LR
     click ACLUI "https://github.com/AlfrescoLabs/alfresco-content-lake-ui"
     click MCP "https://github.com/AlfrescoLabs/content-lake-app"
     click NCB "https://www.prime-force.com"
+    click KGA "https://github.com/stevereiner/kg-spaces-aca"
+    click KGN "https://github.com/stevereiner/kg-spaces-nuxeo"
+    click FGUI "https://github.com/stevereiner/flexible-graphrag"
+    click FGMCP "https://github.com/stevereiner/flexible-graphrag"
 
     classDef source fill:#d1fae5,stroke:#059669,color:#064e3b
     classDef core fill:#38bdf8,stroke:#0369a1,color:#0f172a,font-weight:bold
     classDef app fill:#ede9fe,stroke:#7c3aed,color:#3b0764
-    class ACS,NUX,CLA,OC,SDC source
+    class ACS,NUX,CLA,OC,SDC,DS14,FGA source
     class OA,GS core
-    class STU,CLUI,ACLUI,MCP,NCB app
+    class STU,CLUI,ACLUI,MCP,NCB,KGA,KGN,FGUI,FGMCP app
     style Sources fill:transparent,stroke:#94a3b8,stroke-dasharray:4 4
     style Apps fill:transparent,stroke:#94a3b8,stroke-dasharray:4 4
 ```
@@ -125,6 +142,11 @@ graph LR
 | [Content Lake App UI](https://github.com/AlfrescoLabs/content-lake-app-ui) | AlfrescoLabs | Demo UI for the Content Lake App with dual sign-in (Alfresco + Nuxeo). | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
 | [Alfresco Content Lake UI](https://github.com/AlfrescoLabs/alfresco-content-lake-ui) | AlfrescoLabs | UI extension for ACA or ADW to use the Content Lake App from Alfresco. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
 | [Content Lake App Deployment](https://github.com/AlfrescoLabs/content-lake-app-deployment) | AlfrescoLabs | Self-contained Docker deployment for the Content Lake App. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
+| [Flexible GraphRAG App](https://github.com/stevereiner/flexible-graphrag) | Steve Reiner | Ingests from 14 data sources, with auto sync from Alfresco, Nuxeo, SharePoint, Box, S3, GCS, Azure Blob, OneDrive, Google Drive and the filesystem, and without sync from CMIS, file upload, web pages, YouTube and Wikipedia. Processes documents (Docling, LlamaParse, LiteParse) and chunks them into OpenArch. Knowledge graph auto-building, ontologies, 13 LLM providers, GraphRAG and RAG, hybrid search, AI query and AI chat. Fuses results from OpenArch OpenSearch search + vector with property graphs (15 supported) and/or RDF stores (4 supported). | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
+| [Flexible GraphRAG UIs](https://github.com/stevereiner/flexible-graphrag) | Steve Reiner | Angular, React and Vue frontends for the Flexible GraphRAG App. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
+| [KG Spaces for Alfresco](https://github.com/stevereiner/kg-spaces-aca) | Steve Reiner | UI extension for ACA or ADW to use the Flexible GraphRAG App from Alfresco. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
+| [KG Spaces for Nuxeo](https://github.com/stevereiner/kg-spaces-nuxeo) | Steve Reiner | Angular UI companion app for Nuxeo Web UI to use Flexible GraphRAG from Nuxeo. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
+| [KG Spaces Deployment](https://github.com/stevereiner/kg-spaces-deployment) | Steve Reiner | Docker Compose that deploys the Flexible GraphRAG App, Flexible GraphRAG UIs, KG Spaces UIs, OpenArch, and Alfresco and/or Nuxeo. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
 
 ## Connectors and integrations
 
@@ -132,18 +154,20 @@ graph LR
 | --- | --- | --- | --- | --- |
 | [OpenCrawling](https://github.com/opencrawling/opencrawling) | Piergiorgio Lucidi | Open ingestion platform (Java, Spring AI). The OpenArch integration ([PR #175](https://github.com/opencrawling/opencrawling/pull/175)) adds an output connector with Parquet embeddings, OpenArch as a source and an MCP search tool. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
 | [Sample directory connector](https://github.com/AlfrescoLabs/content-lake-app/tree/main/plugins/examples/sample-directory-connector) | AlfrescoLabs | Minimal example connector for the Content Lake App. Good starting point for a new source. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
+| [Python OpenArch API](https://github.com/stevereiner/python-openarch-api) | Steve Reiner | Python client for the OpenArch REST API: documents by id and path, HXQL query, vector search and aggregations, users and groups, security policies, upload and download. Sync and async clients on httpx, Pydantic v2 models. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
 
 ## Storage and server plugins
 
 | Project | Author | What it does | Status | License |
 | --- | --- | --- | --- | --- |
-| [OpenArch Graph Storage](https://github.com/stevereiner/openarch-graph-storage) | Steve Reiner | Keeps the OpenArch document tree, versions and ACLs in Neo4j or ArcadeDB instead of MongoDB, so knowledge graph entities can link to documents in the same database. | ![Prototype](https://img.shields.io/badge/-Prototype-f59e0b?style=flat) | Apache-2.0 |
+| [OpenArch Graph Storage](https://github.com/stevereiner/openarch-graph-storage) | Steve Reiner | Keeps the OpenArch document tree, versions and ACLs in Neo4j or ArcadeDB instead of MongoDB, so knowledge graph entities can link to documents in the same database. Available as a non-default option in [KG Spaces Deployment](https://github.com/stevereiner/kg-spaces-deployment). | ![Prototype](https://img.shields.io/badge/-Prototype-f59e0b?style=flat) | Apache-2.0 |
 
 ## AI and agents
 
 | Project | Author | What it does | Status | License |
 | --- | --- | --- | --- | --- |
 | [Content Lake App MCP server](https://github.com/AlfrescoLabs/content-lake-app) | AlfrescoLabs | MCP server in `rag-service` with `secureSearch`, `getDocument` and `listSources` tools. ACL-filtered, behind the same auth as the app. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
+| [Flexible GraphRAG MCP server](https://github.com/stevereiner/flexible-graphrag) | Steve Reiner | MCP server (`flexible-graphrag-mcp`) for Claude Desktop and other MCP clients: tools for ingesting, hybrid search and AI query over the Flexible GraphRAG App, with per-user permission filtering. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
 
 ## Partner solutions
 

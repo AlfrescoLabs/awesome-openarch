@@ -61,7 +61,8 @@ Status values: **Prototype** (try it, expect changes), **Working** (used in demo
 
 ## Talks and recordings
 
-- [TTL #183 - Hyland OpenArch: One Data Layer for AI, Any Repository](https://community.hyland.com/discussion/501550/ttl-183-recording-hyland-openarch-one-data-layer-for-ai-any-repository) (October 2026)
+- [Open Source Conference Luxembourg 2026 - Sovereign RAG on Your Own Repository: Letting the Search Engine Enforce Permissions](https://pretalx.com/open-source-conference-luxembourg-2026/talk/3Q8XYD/)
+- [TTL #183 - Hyland OpenArch: One Data Layer for AI, Any Repository](https://community.hyland.com/discussion/501550/ttl-183-recording-hyland-openarch-one-data-layer-for-ai-any-repository)
 - [TTL #180 - The Hyland AI Ready Hub: Permission-Aware AI for Alfresco and Nuxeo](https://community.hyland.com/discussion/499982/ttl-180-recordings-the-hyland-ai-ready-hub-permission-aware-ai-for-alfresco-and-nuxeo)
 - [TTL #174 - Hyland's Next Open Source Project](https://community.hyland.com/discussion/495323/ttl-174-recording-hylands-next-open-source-project)
 

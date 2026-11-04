@@ -6,7 +6,7 @@
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg?style=flat" alt="License: CC0 1.0" /></a>
   <a href="https://github.com/AlfrescoLabs/awesome-openarch/actions/workflows/links.yml"><img src="https://github.com/AlfrescoLabs/awesome-openarch/actions/workflows/links.yml/badge.svg" alt="Link check" /></a>
-  <img src="https://img.shields.io/badge/Projects-14-38bdf8.svg?style=flat" alt="Projects listed: 14" />
+  <img src="https://img.shields.io/badge/Projects-15-38bdf8.svg?style=flat" alt="Projects listed: 15" />
   <a href="https://github.com/AlfrescoLabs/awesome-openarch"><img src="https://img.shields.io/github/stars/AlfrescoLabs/awesome-openarch?style=flat&logo=github" alt="GitHub stars" /></a>
   <a href="https://github.com/AlfrescoLabs/awesome-openarch/commits/main"><img src="https://img.shields.io/github/last-commit/AlfrescoLabs/awesome-openarch?style=flat" alt="Last commit" /></a>
   <a href="https://github.com/AlfrescoLabs/awesome-openarch/discussions"><img src="https://img.shields.io/github/discussions/AlfrescoLabs/awesome-openarch?style=flat&logo=github" alt="Discussions" /></a>
@@ -32,6 +32,7 @@ community work and are not supported by Hyland unless the entry says so.
 
 - [Get started](#get-started)
 - [The OpenArch ecosystem](#the-openarch-ecosystem)
+- [Tools](#tools)
 - [Apps and UIs](#apps-and-uis)
 - [Connectors and integrations](#connectors-and-integrations)
 - [Storage and server plugins](#storage-and-server-plugins)
@@ -45,6 +46,7 @@ community work and are not supported by Hyland unless the entry says so.
 | I want to | Start here |
 | --- | --- |
 | Learn what OpenArch is and run it | [Hyland/OpenArch](https://github.com/Hyland/OpenArch) |
+| Install and run OpenArch locally with Docker | [OpenArch CLI](https://github.com/AlfrescoLabs/openarch-cli) |
 | Try permission-aware RAG on Alfresco or Nuxeo content | [Content Lake App Deployment](https://github.com/AlfrescoLabs/content-lake-app-deployment) |
 | Connect a new source to OpenArch | [Sample directory connector](https://github.com/AlfrescoLabs/content-lake-app/tree/main/plugins/examples/sample-directory-connector) |
 | See a talk first | [TTL #183 - One Data Layer for AI, Any Repository](https://community.hyland.com/discussion/501550/ttl-183-recording-hyland-openarch-one-data-layer-for-ai-any-repository) |
@@ -123,6 +125,12 @@ graph LR
 | ![Prototype](https://img.shields.io/badge/-Prototype-f59e0b?style=flat) | Try it, expect changes. |
 | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Used in demos or real setups. |
 | ![Commercial](https://img.shields.io/badge/-Commercial-2563eb?style=flat) | Partner product, not open source. |
+
+## Tools
+
+| Project | Author | What it does | Status | License |
+| --- | --- | --- | --- | --- |
+| [OpenArch CLI](https://github.com/AlfrescoLabs/openarch-cli) | AlfrescoLabs | Go command line tool to install and run OpenArch with Docker Compose. Writes plain workspace files, checks the setup, and handles upgrade, backup, restore and secret rotation. Also queries the API and manages documents and users. Every command supports `--output json`, so scripts and AI agents can use it. | ![Prototype](https://img.shields.io/badge/-Prototype-f59e0b?style=flat) | Apache-2.0 |
 
 ## Apps and UIs
 

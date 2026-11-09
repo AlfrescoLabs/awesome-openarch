@@ -46,8 +46,8 @@ community work and are not supported by Hyland unless the entry says so.
 | I want to | Start here |
 | --- | --- |
 | Learn what OpenArch is and run it | [Hyland/OpenArch](https://github.com/Hyland/OpenArch) |
-| Install and run OpenArch locally with Docker | [OpenArch CLI](https://github.com/AlfrescoLabs/openarch-cli) |
-| Try permission-aware RAG on Alfresco or Nuxeo content | [Content Lake App Deployment](https://github.com/AlfrescoLabs/content-lake-app-deployment) |
+| Install and run OpenArch locally with Docker | [CLI for OpenArch](https://github.com/AlfrescoLabs/openarch-cli) |
+| Try permission-aware RAG on Alfresco or Nuxeo content | [App for OpenArch: Deployment](https://github.com/AlfrescoLabs/content-lake-app-deployment) |
 | Connect a new source to OpenArch | [Sample directory connector](https://github.com/AlfrescoLabs/content-lake-app/tree/main/plugins/examples/sample-directory-connector) |
 | See a talk first | [TTL #183 - One Data Layer for AI, Any Repository](https://community.hyland.com/discussion/501550/ttl-183-recording-hyland-openarch-one-data-layer-for-ai-any-repository) |
 
@@ -61,7 +61,7 @@ graph LR
     subgraph Sources["Sources and ingestion"]
         ACS[Alfresco]
         NUX[Nuxeo]
-        CLA[Content Lake App]
+        CLA["App for OpenArch"]
         OC[OpenCrawling]
         SDC[Sample directory connector]
         DS14[14 data sources]
@@ -73,9 +73,9 @@ graph LR
 
     subgraph Apps["Apps, UIs and AI"]
         STU[OpenArch Studio]
-        CLUI[Content Lake App UI]
-        ACLUI[Alfresco Content Lake UI]
-        MCP[Content Lake MCP server]
+        CLUI["App for OpenArch: UI"]
+        ACLUI["App for OpenArch: Alfresco UI extension"]
+        MCP["App for OpenArch MCP server"]
         NCB[Nuxeo Copilot Bridge]
         KGS[KG Spaces UIs]
     end
@@ -130,17 +130,17 @@ graph LR
 
 | Project | Author | What it does | Status | License |
 | --- | --- | --- | --- | --- |
-| [OpenArch CLI](https://github.com/AlfrescoLabs/openarch-cli) | AlfrescoLabs | Go command line tool to install and run OpenArch with Docker Compose. Writes plain workspace files, checks the setup, and handles upgrade, backup, restore and secret rotation. Also queries the API and manages documents and users. Every command supports `--output json`, so scripts and AI agents can use it. | ![Prototype](https://img.shields.io/badge/-Prototype-f59e0b?style=flat) | Apache-2.0 |
+| [CLI for OpenArch](https://github.com/AlfrescoLabs/openarch-cli) | AlfrescoLabs | Go command line tool to install and run OpenArch with Docker Compose. Writes plain workspace files, checks the setup, and handles upgrade, backup, restore and secret rotation. Also queries the API and manages documents and users. Every command supports `--output json`, so scripts and AI agents can use it. | ![Prototype](https://img.shields.io/badge/-Prototype-f59e0b?style=flat) | Apache-2.0 |
 
 ## Apps and UIs
 
 | Project | Author | What it does | Status | License |
 | --- | --- | --- | --- | --- |
 | [OpenArch Studio](https://github.com/haaldinger/openarch-studio) | Heath Aldinger | AI document workspace: Docling extraction, cited RAG chat, reranked search and a knowledge graph. React + FastAPI, local models, calls OpenArch as the signed-in user. | ![Prototype](https://img.shields.io/badge/-Prototype-f59e0b?style=flat) | Apache-2.0 |
-| [Content Lake App](https://github.com/AlfrescoLabs/content-lake-app) | AlfrescoLabs | Syncs Alfresco and Nuxeo content into OpenArch and adds permission-aware RAG on top. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
-| [Content Lake App UI](https://github.com/AlfrescoLabs/content-lake-app-ui) | AlfrescoLabs | Demo UI for the Content Lake App with dual sign-in (Alfresco + Nuxeo). | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
-| [Alfresco Content Lake UI](https://github.com/AlfrescoLabs/alfresco-content-lake-ui) | AlfrescoLabs | UI extension for ACA or ADW to use the Content Lake App from Alfresco. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
-| [Content Lake App Deployment](https://github.com/AlfrescoLabs/content-lake-app-deployment) | AlfrescoLabs | Self-contained Docker deployment for the Content Lake App. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
+| [App for OpenArch](https://github.com/AlfrescoLabs/content-lake-app) | AlfrescoLabs | Syncs Alfresco and Nuxeo content into OpenArch and adds permission-aware RAG on top. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
+| [App for OpenArch: UI](https://github.com/AlfrescoLabs/content-lake-app-ui) | AlfrescoLabs | Demo UI for App for OpenArch with dual sign-in (Alfresco + Nuxeo). | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
+| [App for OpenArch: Alfresco UI extension](https://github.com/AlfrescoLabs/alfresco-content-lake-ui) | AlfrescoLabs | UI extension for ACA or ADW to use App for OpenArch from Alfresco. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
+| [App for OpenArch: Deployment](https://github.com/AlfrescoLabs/content-lake-app-deployment) | AlfrescoLabs | Self-contained Docker deployment for App for OpenArch. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
 | [Flexible GraphRAG](https://github.com/stevereiner/flexible-graphrag) | Steve Reiner | Python (FastAPI) backend that ingests documents from 14 sources, including Alfresco and Nuxeo, into OpenArch. Adds GraphRAG, hybrid search and AI chat over OpenArch plus property graph and RDF stores. Builds knowledge graphs automatically, with optional ontologies, using a choice of three document processors and many LLM providers. Ships Angular, React and Vue frontends and an MCP server. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
 | [KG Spaces](https://github.com/stevereiner/kg-spaces-aca) | Steve Reiner | UI extension for ACA or ADW to use Flexible GraphRAG from Alfresco. A [Nuxeo version](https://github.com/stevereiner/kg-spaces-nuxeo) adds the same actions to Nuxeo Web UI. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
 | [KG Spaces Deployment](https://github.com/stevereiner/kg-spaces-deployment) | Steve Reiner | Docker Compose that deploys Flexible GraphRAG, the KG Spaces UIs, OpenArch, and Alfresco and/or Nuxeo. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
@@ -150,7 +150,7 @@ graph LR
 | Project | Author | What it does | Status | License |
 | --- | --- | --- | --- | --- |
 | [OpenCrawling](https://github.com/opencrawling/opencrawling) | Piergiorgio Lucidi | Open ingestion platform (Java, Spring AI). The OpenArch integration ([PR #175](https://github.com/opencrawling/opencrawling/pull/175)) adds an output connector with Parquet embeddings, OpenArch as a source and an MCP search tool. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
-| [Sample directory connector](https://github.com/AlfrescoLabs/content-lake-app/tree/main/plugins/examples/sample-directory-connector) | AlfrescoLabs | Minimal example connector for the Content Lake App. Good starting point for a new source. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
+| [Sample directory connector](https://github.com/AlfrescoLabs/content-lake-app/tree/main/plugins/examples/sample-directory-connector) | AlfrescoLabs | Minimal example connector for App for OpenArch. Good starting point for a new source. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
 | [Python OpenArch API](https://github.com/stevereiner/python-openarch-api) | Steve Reiner | Python client for the OpenArch REST API: documents by id and path, HXQL query, vector search and aggregations, users and groups, security policies, upload and download. Sync and async clients on httpx, Pydantic v2 models. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
 
 ## Storage and server plugins
@@ -163,7 +163,7 @@ graph LR
 
 | Project | Author | What it does | Status | License |
 | --- | --- | --- | --- | --- |
-| [Content Lake App MCP server](https://github.com/AlfrescoLabs/content-lake-app) | AlfrescoLabs | MCP server in `rag-service` with `secureSearch`, `getDocument` and `listSources` tools. ACL-filtered, behind the same auth as the app. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
+| [App for OpenArch MCP server](https://github.com/AlfrescoLabs/content-lake-app) | AlfrescoLabs | MCP server in `rag-service` with `secureSearch`, `getDocument` and `listSources` tools. ACL-filtered, behind the same auth as the app. | ![Working](https://img.shields.io/badge/-Working-16a34a?style=flat) | Apache-2.0 |
 
 ## Partner solutions
 

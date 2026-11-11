@@ -6,7 +6,7 @@
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg?style=flat" alt="License: CC0 1.0" /></a>
   <a href="https://github.com/AlfrescoLabs/awesome-openarch/actions/workflows/links.yml"><img src="https://github.com/AlfrescoLabs/awesome-openarch/actions/workflows/links.yml/badge.svg" alt="Link check" /></a>
-  <img src="https://img.shields.io/badge/Projects-16-38bdf8.svg?style=flat" alt="Projects listed: 16" />
+  <img src="https://img.shields.io/badge/Projects-17-38bdf8.svg?style=flat" alt="Projects listed: 17" />
   <a href="https://github.com/AlfrescoLabs/awesome-openarch"><img src="https://img.shields.io/github/stars/AlfrescoLabs/awesome-openarch?style=flat&logo=github" alt="GitHub stars" /></a>
   <a href="https://github.com/AlfrescoLabs/awesome-openarch/commits/main"><img src="https://img.shields.io/github/last-commit/AlfrescoLabs/awesome-openarch?style=flat" alt="Last commit" /></a>
   <a href="https://github.com/AlfrescoLabs/awesome-openarch/discussions"><img src="https://img.shields.io/github/discussions/AlfrescoLabs/awesome-openarch?style=flat&logo=github" alt="Discussions" /></a>
@@ -27,7 +27,7 @@ embeddings from any repository, and answers permission-aware queries, including 
 
 This list only links. Each project lives in its author's repository. Projects listed here are
 community work and are not supported by Hyland unless the entry says so. This includes the AlfrescoLabs
-projects (CLI for OpenArch, openarch-docs, App for OpenArch): Hyland does not officially support them.
+projects (CLI for OpenArch, openarch-docs, openarch-app, App for OpenArch): Hyland does not officially support them.
 
 ## Contents
 
@@ -132,6 +132,7 @@ graph LR
 | Project | Author | What it does | Status | License |
 | --- | --- | --- | --- | --- |
 | [CLI for OpenArch](https://github.com/AlfrescoLabs/openarch-cli) | AlfrescoLabs | Go command line tool to install and run Hyland OpenArch with Docker Compose. Writes plain workspace files, checks the setup, and handles upgrade, backup, restore and secret rotation. Also queries the API and manages documents and users. Every command supports `--output json`, so scripts and AI agents can use it. | ![Prototype](https://img.shields.io/badge/-Prototype-f59e0b?style=flat) | Apache-2.0 |
+| [openarch-app](https://github.com/AlfrescoLabs/openarch-app) | AlfrescoLabs | Plugin for the CLI for OpenArch: installs and runs App for OpenArch on your machine with Docker Compose. Choose the sources (one or two Alfresco, Nuxeo), and ask one question across all of them in the sample UI, with the permissions of each repository. Random secrets, ports on 127.0.0.1, local models. | ![Prototype](https://img.shields.io/badge/-Prototype-f59e0b?style=flat) | Apache-2.0 |
 
 ## Apps and UIs
 

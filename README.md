@@ -27,7 +27,7 @@ embeddings from any repository, and answers permission-aware queries, including 
 
 This list only links. Each project lives in its author's repository. Projects listed here are
 community work and are not supported by Hyland unless the entry says so. This includes the AlfrescoLabs
-projects (CLI for OpenArch, openarch-docs, openarch-app, the Docker Desktop extension, App for OpenArch): Hyland does not officially support them.
+projects (CLI for OpenArch, openarch-docs, openarch-app, the Docker Extension for OpenArch, App for OpenArch): Hyland does not officially support them.
 
 ## Contents
 
@@ -48,7 +48,7 @@ projects (CLI for OpenArch, openarch-docs, openarch-app, the Docker Desktop exte
 | --- | --- |
 | Learn what Hyland OpenArch is and run it | [Hyland/OpenArch](https://github.com/Hyland/OpenArch) |
 | Install and run Hyland OpenArch locally with Docker | [CLI for OpenArch](https://github.com/AlfrescoLabs/openarch-cli) |
-| Try Hyland OpenArch in Docker Desktop, with a permission demo | [Docker Desktop extension for Hyland OpenArch](https://github.com/AlfrescoLabs/openarch-docker-extension) |
+| Try Hyland OpenArch in Docker Desktop, with a permission demo | [Docker Extension for OpenArch](https://github.com/AlfrescoLabs/openarch-docker-extension) |
 | Try permission-aware RAG on Alfresco or Nuxeo content | [App for OpenArch: Deployment](https://github.com/AlfrescoLabs/content-lake-app-deployment) |
 | Connect a new source to OpenArch | [Sample directory connector](https://github.com/AlfrescoLabs/content-lake-app/tree/main/plugins/examples/sample-directory-connector) |
 | See a talk first | [TTL #183 - One Data Layer for AI, Any Repository](https://community.hyland.com/discussion/501550/ttl-183-recording-hyland-openarch-one-data-layer-for-ai-any-repository) |
@@ -133,7 +133,7 @@ graph LR
 | Project | Author | What it does | Status | License |
 | --- | --- | --- | --- | --- |
 | [CLI for OpenArch](https://github.com/AlfrescoLabs/openarch-cli) | AlfrescoLabs | Go command line tool to install and run Hyland OpenArch with Docker Compose. Writes plain workspace files, checks the setup, and handles upgrade, backup, restore and secret rotation. Also queries the API and manages documents and users. Every command supports `--output json`, so scripts and AI agents can use it. | ![Prototype](https://img.shields.io/badge/-Prototype-f59e0b?style=flat) | Apache-2.0 |
-| [Docker Desktop extension for Hyland OpenArch](https://github.com/AlfrescoLabs/openarch-docker-extension) | AlfrescoLabs | Docker Desktop extension: start Hyland OpenArch with one click, choose the version, and see permission-aware search, with two demo users and sample documents. It bundles the CLI for OpenArch, and shows the MCP setup for AI clients. Install with `docker extension install angelborroy/openarch-extension`. | ![Prototype](https://img.shields.io/badge/-Prototype-f59e0b?style=flat) | Apache-2.0 |
+| [Docker Extension for OpenArch](https://github.com/AlfrescoLabs/openarch-docker-extension) | AlfrescoLabs | Docker Desktop extension: start Hyland OpenArch with one click, choose the version, and see permission-aware search, with two demo users and sample documents. It bundles the CLI for OpenArch, and shows the MCP setup for AI clients. Install with `docker extension install angelborroy/openarch-extension`. | ![Prototype](https://img.shields.io/badge/-Prototype-f59e0b?style=flat) | Apache-2.0 |
 | [openarch-app](https://github.com/AlfrescoLabs/openarch-app) | AlfrescoLabs | Plugin for the CLI for OpenArch: installs and runs App for OpenArch on your machine with Docker Compose. Choose the sources (one or two Alfresco, Nuxeo), and ask one question across all of them in the sample UI, with the permissions of each repository. Random secrets, ports on 127.0.0.1, local models. | ![Prototype](https://img.shields.io/badge/-Prototype-f59e0b?style=flat) | Apache-2.0 |
 
 ## Apps and UIs

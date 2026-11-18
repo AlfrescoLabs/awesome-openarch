@@ -16,6 +16,7 @@
   <a href="https://github.com/Hyland/OpenArch"><b>Hyland OpenArch</b></a> |
   <a href="CONTRIBUTING.md"><b>Contribute</b></a> |
   <a href="https://github.com/AlfrescoLabs/awesome-openarch/discussions"><b>Discussions</b></a> |
+  <a href="https://community.hyland.com/group/26-hyland-openarch"><b>Hyland OpenArch group</b></a> |
   <a href="https://github.com/topics/openarch"><b>Topic: openarch</b></a>
 </p>
 
@@ -192,6 +193,9 @@ Newest first.
 Found something missing? See [CONTRIBUTING.md](CONTRIBUTING.md), or open a "Suggest a project" issue.
 You can also tag your repository with the GitHub topic [`openarch`](https://github.com/topics/openarch)
 so others can find it.
+
+Questions about Hyland OpenArch: ask in the
+[Hyland OpenArch group](https://community.hyland.com/group/26-hyland-openarch) on Hyland Community.
 
 ## License
 
